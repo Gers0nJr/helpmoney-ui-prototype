@@ -1,0 +1,187 @@
+<section class="content-header"></section>
+  <section class="invoice">
+
+    <form [formGroup]="formularioLancamento" (ngSubmit)="adicionarLancamento()" novalidate>
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+           <b>Novo Lançamento</b>
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-xs-6">
+          <div [ngClass]="formularioLancamento.get('tipo').valid && formularioLancamento.get('tipo').dirty ? 'has-success' : ''">
+            <div [ngClass]="!formularioLancamento.get('tipo').valid && formularioLancamento.get('tipo').touched ? 'has-error' : ''">
+              <label class="control-label" for="inputSuccess">
+                <b>Tipo </b>
+                <b *ngIf="formularioLancamento.get('tipo').valid && formularioLancamento.get('tipo').dirty ? 'has-success' : ''">Ok <i class="fa fa-check"></i></b>
+                <b *ngIf="!formularioLancamento.get('tipo').valid && formularioLancamento.get('tipo').touched ? 'has-error' : ''">obrigatório <i class="fa fa-times-circle"></i></b>
+              </label>
+              <select class="form-control" formControlName="tipo">
+                <option [value]="tipo.value" *ngFor="let tipo of tipos">{{ tipo.label }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--<div class="row">
+        <div class="col-sm-3 col-xs-3">
+          <div class="btn-group">
+              <button
+              type="button"
+              class="btn btn-primary"
+              >Receita</button>
+              <button type="button" class="btn btn-default" >Despesa</button>
+          </div>
+        </div>
+      </div>-->
+
+      <br/>
+
+      <div class="row">
+
+        <div class="col-sm-3 col-xs-3">
+          <div [ngClass]="formularioLancamento.get('dataVencimento').valid && formularioLancamento.get('dataVencimento').dirty ? 'has-success' : ''">
+            <div [ngClass]="!formularioLancamento.get('dataVencimento').valid && formularioLancamento.get('dataVencimento').touched ? 'has-error' : ''">
+              <label class="control-label" for="inputSuccess">
+                <b>Vencimento </b>
+                <b *ngIf="formularioLancamento.get('dataVencimento').valid && formularioLancamento.get('dataVencimento').dirty ? 'has-success' : ''">Ok <i class="fa fa-check"></i></b>
+                <b *ngIf="!formularioLancamento.get('dataVencimento').valid && formularioLancamento.get('dataVencimento').touched ? 'has-error' : ''">obrigatório <i class="fa fa-times-circle"></i></b>
+              </label>
+              <div class="input-group date">
+                <div class="input-group-addon">
+                  <i class="fa fa-calendar"></i>
+                </div>
+                <input
+                type="text"
+                class="form-control pull-right"
+                autocomplete="off"
+                placeholder="AAAA-MM-DD"
+                bsDatepicker
+                [bsConfig]="datePickerConfig"
+                formControlName="dataVencimento">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-xs-3">
+            <label class="control-label">
+              <b>Recebimento </b>
+            </label>
+            <div class="input-group date">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <input
+              type="text"
+              class="form-control pull-right"
+              autocomplete="off"
+              placeholder="AAAA-MM-DD"
+              bsDatepicker
+              [bsConfig]="datePickerConfig"
+              formControlName="dataPagamento">
+            </div>
+        </div>
+
+      </div>
+
+      <br/>
+
+      <div class="row">
+
+        <div class="col-sm-8 col-xs-8">
+          <div [ngClass]="formularioLancamento.get('descricao').valid && formularioLancamento.get('descricao').dirty ? 'has-success' : ''">
+            <div [ngClass]="!formularioLancamento.get('descricao').valid && formularioLancamento.get('descricao').touched ? 'has-error' : ''">
+              <label class="control-label" for="inputSuccess">
+                <b>Descrição </b>
+                <b *ngIf="formularioLancamento.get('descricao').valid && formularioLancamento.get('descricao').dirty ? 'has-success' : ''">Ok <i class="fa fa-check"></i></b>
+                <b *ngIf="!formularioLancamento.get('descricao').valid && formularioLancamento.get('descricao').touched ? 'has-error' : ''">obrigatório <i class="fa fa-times-circle"></i></b>
+              </label>
+              <input type="text" class="form-control" id="inputSuccess" autocomplete="off" formControlName="descricao">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 col-xs-4">
+          <div [ngClass]="formularioLancamento.get('valor').valid && formularioLancamento.get('valor').dirty ? 'has-success' : ''">
+            <div [ngClass]="!formularioLancamento.get('valor').valid && formularioLancamento.get('valor').touched ? 'has-error' : ''">
+              <label class="control-label" for="inputSuccess">
+                <b>Valor </b>
+                <b *ngIf="formularioLancamento.get('valor').valid && formularioLancamento.get('valor').dirty ? 'has-success' : ''">Ok <i class="fa fa-check"></i></b>
+                <b *ngIf="!formularioLancamento.get('valor').valid && formularioLancamento.get('valor').touched ? 'has-error' : ''">obrigatório <i class="fa fa-times-circle"></i></b>
+              </label>
+              <input type="text" class="form-control" autocomplete="off" formControlName="valor" currencyMask [options]="{ align: 'left', prefix: 'R$ ', thousands: '.', decimal: ',' }">
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <br/>
+
+      <div class="row">
+
+        <div class="col-sm-6 col-xs-6" formGroupName="categoria">
+          <div [ngClass]="formularioLancamento.get('categoria').valid && formularioLancamento.get('categoria').dirty ? 'has-success' : ''">
+            <div [ngClass]="!formularioLancamento.get('categoria').valid && formularioLancamento.get('categoria').touched ? 'has-error' : ''">
+              <label class="control-label" for="inputSuccess">
+                <b>Categoria </b>
+                <b *ngIf="formularioLancamento.get('categoria').valid && formularioLancamento.get('categoria').dirty ? 'has-success' : ''">Ok <i class="fa fa-check"></i></b>
+                <b *ngIf="!formularioLancamento.get('categoria').valid && formularioLancamento.get('categoria').touched ? 'has-error' : ''">obrigatório <i class="fa fa-times-circle"></i></b>
+              </label>
+              <select class="form-control" formControlName="codigo">
+                <option [value]="categoria.codigo" *ngFor="let categoria of categorias">{{ categoria.nome }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-6" formGroupName="pessoa">
+          <div [ngClass]="formularioLancamento.get('pessoa').valid && formularioLancamento.get('pessoa').dirty ? 'has-success' : ''">
+            <div [ngClass]="!formularioLancamento.get('pessoa').valid && formularioLancamento.get('pessoa').touched ? 'has-error' : ''">
+              <label class="control-label" for="inputSuccess">
+                <b>Pessoa </b>
+                <b *ngIf="formularioLancamento.get('pessoa').valid && formularioLancamento.get('pessoa').dirty ? 'has-success' : ''">Ok <i class="fa fa-check"></i></b>
+                <b *ngIf="!formularioLancamento.get('pessoa').valid && formularioLancamento.get('pessoa').touched ? 'has-error' : ''">obrigatório <i class="fa fa-times-circle"></i></b>
+              </label>
+              <select class="form-control" formControlName="codigo" >
+                <option [value]="pessoa.codigo" *ngFor="let pessoa of pessoas">{{ pessoa.nome }}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <br/>
+
+      <div class="row">
+        <div class="col-sm-12 col-xs-12">
+              <label class="control-label" for="inputSuccess">
+                <b>Observação </b>
+              </label>
+            <textarea class="form-control" rows="3" autocomplete="off" formControlName="observacao"></textarea>
+          </div>
+      </div>
+
+      <br/>
+
+      <div class="row">
+        <div class="col-sm-12 col-xs-12">
+          <span class="espaco">
+              <button class="btn btn-info" [disabled]="formularioLancamento.invalid" >Salvar</button>
+          </span>
+          <span class="espaco">
+              <button class="btn btn-info" [disabled]="formularioLancamento.invalid" >Novo</button>
+          </span>
+          <span>
+            <a [routerLink]="['/lancamentos-pesquisa']">Voltar para a pesquisa</a>
+          </span>
+        </div>
+      </div>
+    </form>
+
+</section>

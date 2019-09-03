@@ -1,0 +1,377 @@
+{
+    "content": [
+        {
+            "codigo": 1,
+            "descricao": "Salário mensal",
+            "dataVencimento": [
+                2018,
+                8,
+                30
+            ],
+            "dataPagamento": null,
+            "valor": 2172,
+            "observacao": "Distribuição de lucros",
+            "tipo": "RECEITA",
+            "categoria": {
+                "codigo": 5,
+                "nome": "Outros"
+            },
+            "pessoa": {
+                "codigo": 7,
+                "nome": "Helbor",
+                "endereco": {
+                    "logradouro": "Av Narciso Yagi Guimarães",
+                    "numero": "1145",
+                    "complemento": "15º Andar",
+                    "bairro": "Jd Arménia",
+                    "cep": "08780-500",
+                    "cidade": "Mogi das Cruzes",
+                    "estado": "SP"
+                },
+                "ativo": true
+            }
+        },
+        {
+            "codigo": 2,
+            "descricao": "Fatura Cartão Crédito",
+            "dataVencimento": [
+                2018,
+                9,
+                15
+            ],
+            "dataPagamento": [
+                2018,
+                9,
+                16
+            ],
+            "valor": 888.32,
+            "observacao": null,
+            "tipo": "DESPESA",
+            "categoria": {
+                "codigo": 2,
+                "nome": "Banco"
+            },
+            "pessoa": {
+                "codigo": 6,
+                "nome": "Banco Santander",
+                "endereco": {
+                    "logradouro": "Av Brasil",
+                    "numero": "100",
+                    "complemento": null,
+                    "bairro": "Centro",
+                    "cep": "77.400-12",
+                    "cidade": "Ferraz de Vasconcelos",
+                    "estado": "SP"
+                },
+                "ativo": false
+            }
+        },
+        {
+            "codigo": 3,
+            "descricao": "Salário mensal",
+            "dataVencimento": [
+                2018,
+                9,
+                30
+            ],
+            "dataPagamento": null,
+            "valor": 2192,
+            "observacao": "Distribuição de lucros",
+            "tipo": "RECEITA",
+            "categoria": {
+                "codigo": 5,
+                "nome": "Outros"
+            },
+            "pessoa": {
+                "codigo": 7,
+                "nome": "Helbor",
+                "endereco": {
+                    "logradouro": "Av Narciso Yagi Guimarães",
+                    "numero": "1145",
+                    "complemento": "15º Andar",
+                    "bairro": "Jd Arménia",
+                    "cep": "08780-500",
+                    "cidade": "Mogi das Cruzes",
+                    "estado": "SP"
+                },
+                "ativo": true
+            }
+        },
+        {
+            "codigo": 4,
+            "descricao": "Compra no mercado",
+            "dataVencimento": [
+                2018,
+                9,
+                28
+            ],
+            "dataPagamento": [
+                2018,
+                9,
+                29
+            ],
+            "valor": 330.12,
+            "observacao": null,
+            "tipo": "DESPESA",
+            "categoria": {
+                "codigo": 3,
+                "nome": "Supermercado"
+            },
+            "pessoa": {
+                "codigo": 1,
+                "nome": "Super Mercado Rossi",
+                "endereco": {
+                    "logradouro": "Rua do Abacate",
+                    "numero": "102",
+                    "complemento": "",
+                    "bairro": "Vila Margarida",
+                    "cep": "08543-200",
+                    "cidade": "Ferraz de Vasconcelos",
+                    "estado": "SP"
+                },
+                "ativo": false
+            }
+        },
+        {
+            "codigo": 5,
+            "descricao": "Pagamento Helpsystem",
+            "dataVencimento": [
+                2018,
+                8,
+                25
+            ],
+            "dataPagamento": null,
+            "valor": 250,
+            "observacao": "Aluguel Software",
+            "tipo": "RECEITA",
+            "categoria": {
+                "codigo": 5,
+                "nome": "Outros"
+            },
+            "pessoa": {
+                "codigo": 7,
+                "nome": "Helbor",
+                "endereco": {
+                    "logradouro": "Av Narciso Yagi Guimarães",
+                    "numero": "1145",
+                    "complemento": "15º Andar",
+                    "bairro": "Jd Arménia",
+                    "cep": "08780-500",
+                    "cidade": "Mogi das Cruzes",
+                    "estado": "SP"
+                },
+                "ativo": true
+            }
+        },
+        {
+            "codigo": 6,
+            "descricao": "Abastecimento",
+            "dataVencimento": [
+                2018,
+                9,
+                23
+            ],
+            "dataPagamento": [
+                2018,
+                9,
+                23
+            ],
+            "valor": 20,
+            "observacao": null,
+            "tipo": "DESPESA",
+            "categoria": {
+                "codigo": 6,
+                "nome": "Combustível"
+            },
+            "pessoa": {
+                "codigo": 4,
+                "nome": "Posto Ipiranga",
+                "endereco": {
+                    "logradouro": "Rua do Motorista",
+                    "numero": "123",
+                    "complemento": "",
+                    "bairro": "Temporim",
+                    "cep": "38.400-12",
+                    "cidade": "Ferraz de Vasconcelos",
+                    "estado": "SP"
+                },
+                "ativo": true
+            }
+        },
+        {
+            "codigo": 7,
+            "descricao": "Abastecimento",
+            "dataVencimento": [
+                2018,
+                9,
+                23
+            ],
+            "dataPagamento": [
+                2018,
+                9,
+                23
+            ],
+            "valor": 30,
+            "observacao": null,
+            "tipo": "DESPESA",
+            "categoria": {
+                "codigo": 6,
+                "nome": "Combustível"
+            },
+            "pessoa": {
+                "codigo": 5,
+                "nome": "Posto Shell",
+                "endereco": {
+                    "logradouro": "Av Rio Branco",
+                    "numero": "321",
+                    "complemento": null,
+                    "bairro": "Guaianases",
+                    "cep": "56.400-12",
+                    "cidade": "São Paulo",
+                    "estado": "SP"
+                },
+                "ativo": true
+            }
+        },
+        {
+            "codigo": 8,
+            "descricao": "Seguro",
+            "dataVencimento": [
+                2018,
+                9,
+                18
+            ],
+            "dataPagamento": [
+                2018,
+                9,
+                17
+            ],
+            "valor": 109.99,
+            "observacao": null,
+            "tipo": "DESPESA",
+            "categoria": {
+                "codigo": 5,
+                "nome": "Outros"
+            },
+            "pessoa": {
+                "codigo": 8,
+                "nome": "Ituran",
+                "endereco": {
+                    "logradouro": "Rua da Manga",
+                    "numero": "433",
+                    "complemento": null,
+                    "bairro": "Centro",
+                    "cep": "31.400-12",
+                    "cidade": "Poá",
+                    "estado": "SP"
+                },
+                "ativo": true
+            }
+        },
+        {
+            "codigo": 9,
+            "descricao": "Conta de Luz",
+            "dataVencimento": [
+                2018,
+                9,
+                20
+            ],
+            "dataPagamento": [
+                2018,
+                9,
+                15
+            ],
+            "valor": 187.26,
+            "observacao": null,
+            "tipo": "DESPESA",
+            "categoria": {
+                "codigo": 5,
+                "nome": "Outros"
+            },
+            "pessoa": {
+                "codigo": 10,
+                "nome": "Bandeirante Energia",
+                "endereco": {
+                    "logradouro": "Rua da Terra",
+                    "numero": "1233",
+                    "complemento": "",
+                    "bairro": "Centro",
+                    "cep": "99.400-12",
+                    "cidade": "Ferraz de Vasconcelos",
+                    "estado": "SP"
+                },
+                "ativo": true
+            }
+        },
+        {
+            "codigo": 10,
+            "descricao": "Conta de Agua",
+            "dataVencimento": [
+                2018,
+                9,
+                18
+            ],
+            "dataPagamento": [
+                2018,
+                9,
+                17
+            ],
+            "valor": 58.83,
+            "observacao": null,
+            "tipo": "DESPESA",
+            "categoria": {
+                "codigo": 2,
+                "nome": "Banco"
+            },
+            "pessoa": {
+                "codigo": 9,
+                "nome": "Sabesp",
+                "endereco": {
+                    "logradouro": "Rua do Músico",
+                    "numero": "566",
+                    "complemento": null,
+                    "bairro": "Centro",
+                    "cep": "38.400-00",
+                    "cidade": "Ferraz de Vasconcelos",
+                    "estado": "SP"
+                },
+                "ativo": true
+            }
+        },
+        {
+            "codigo": 11,
+            "descricao": "Boleto Bancário",
+            "dataVencimento": [
+                2018,
+                7,
+                23
+            ],
+            "dataPagamento": [
+                2018,
+                8,
+                1
+            ],
+            "valor": 100,
+            "observacao": "Fatura Santander",
+            "tipo": "DESPESA",
+            "categoria": {
+                "codigo": 2,
+                "nome": "Banco"
+            },
+            "pessoa": {
+                "codigo": 6,
+                "nome": "Banco Santander",
+                "endereco": {
+                    "logradouro": "Av Brasil",
+                    "numero": "100",
+                    "complemento": null,
+                    "bairro": "Centro",
+                    "cep": "77.400-12",
+                    "cidade": "Ferraz de Vasconcelos",
+                    "estado": "SP"
+                },
+                "ativo": false
+            }
+        }
+    ]
+}
